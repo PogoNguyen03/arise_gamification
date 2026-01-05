@@ -1,0 +1,37 @@
+:root {
+  /* System Colors */
+  --system-blue: #00eaff;
+  --system-blue-dim: #00eaff40;
+  --system-blue-glow: drop-shadow(0 0 10px #00eaff);
+  --system-bg: #0a0e17;
+  --system-panel-bg: rgba(6, 11, 25, 0.9);
+  --system-border: #1a2f4d;
+  
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary: #8b9bb4;
+  --text-highlight: #ffcc00; /* For warnings or special stats */
+
+  /* Stats Colors */
+  --stat-str: #ff4d4d;
+  --stat-agl: #00eaff;
+  --stat-int: #9d4dff;
+  --stat-vit: #4dff88;
+  --stat-per: #ff9d4d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--system-bg);
+  color: var(--text-primary);
+  font-family: 'Courier New', Courier, monospace; /* Retro terminal feel for now */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(0, 234, 255, 0.05) 0%, transparent 50%),
+    linear-gradient(rgba(0, 0, 0, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.8) 1px, transparent 1px);
+  background-size: 100% 100%, 20px 20px, 20px 20px;
+}

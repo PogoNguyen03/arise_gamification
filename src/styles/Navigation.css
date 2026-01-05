@@ -1,0 +1,33 @@
+.system-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--system-border);
+    padding-bottom: 10px;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 1px solid var(--system-border);
+    color: var(--text-secondary);
+    padding: 8px 20px;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 234, 255, 0.1);
+    color: var(--system-blue);
+    box-shadow: 0 0 10px var(--system-blue-dim);
+}
+
+.nav-btn.active {
+    background: rgba(0, 234, 255, 0.2);
+    color: var(--system-blue);
+    border-color: var(--system-blue);
+    box-shadow: 0 0 15px var(--system-blue-dim);
+}

@@ -1,0 +1,139 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.status-header h2 {
+    margin: 0;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--system-border);
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.status-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .status-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "info bars"
+            "stats stats";
+    }
+
+    .info-section {
+        grid-area: info;
+    }
+
+    .bars-section {
+        grid-area: bars;
+    }
+
+    .stats-section {
+        grid-area: stats;
+    }
+}
+
+/* Info Section */
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 4px;
+}
+
+.info-row .label {
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+.info-row .value {
+    color: var(--text-primary);
+}
+
+.level-value {
+    color: var(--system-blue);
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+/* Bars Section */
+.bar-container {
+    margin-bottom: 15px;
+}
+
+.bar-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.progress-bar {
+    height: 12px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--system-border);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    transition: width 0.5s ease-out;
+}
+
+.hp-bar .progress-fill {
+    background: var(--stat-str);
+    box-shadow: 0 0 5px var(--stat-str);
+}
+
+.mp-bar .progress-fill {
+    background: var(--stat-agl);
+    box-shadow: 0 0 5px var(--stat-agl);
+}
+
+.fatigue-bar .progress-fill {
+    background: var(--text-highlight);
+}
+
+/* Stats Section */
+.stats-section h3 {
+    color: var(--text-secondary);
+    margin-top: 0;
+    border-bottom: 1px solid var(--system-border);
+    padding-bottom: 5px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.stat-name {
+    color: var(--text-primary);
+}
+
+.stat-value {
+    color: var(--text-primary);
+    font-weight: bold;
+}
+
+.stat-points {
+    margin-top: 20px;
+    text-align: right;
+    color: var(--text-secondary);
+}
+
+.points-value {
+    color: var(--text-highlight);
+    font-weight: bold;
+    font-size: 1.2rem;
+}.stat-btn { background: none; border: 1px solid var(--system-blue); color: var(--system-blue); cursor: pointer; padding: 0 5px; font-weight: bold; } .stat-btn:hover { background: var(--system-blue); color: black; }

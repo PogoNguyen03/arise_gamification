@@ -1,0 +1,95 @@
+.quest-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.quest-header h2 {
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--system-border);
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.quest-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.quest-card {
+    border: 1px solid var(--system-border);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quest-card:hover {
+    border-color: var(--system-blue);
+    background: rgba(0, 234, 255, 0.05);
+}
+
+.quest-card.completed {
+    opacity: 0.6;
+    border-color: gray;
+}
+
+.quest-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--text-secondary);
+}
+
+.quest-card.daily::before {
+    background: var(--stat-str);
+}
+
+.quest-card.emergency::before {
+    background: var(--stat-str);
+    box-shadow: 0 0 10px red;
+}
+
+.quest-card.normal::before {
+    background: var(--system-blue);
+}
+
+.quest-type-badge {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.quest-card h3 {
+    margin: 0 0 5px 0;
+    color: var(--text-primary);
+}
+
+.quest-card p {
+    margin: 0 0 10px 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.quest-rewards {
+    font-size: 0.8rem;
+    color: var(--text-highlight);
+}
+
+.quest-status {
+    font-weight: bold;
+    color: var(--text-secondary);
+}
+
+.quest-card.completed .quest-status {
+    color: var(--stat-vit);
+}
